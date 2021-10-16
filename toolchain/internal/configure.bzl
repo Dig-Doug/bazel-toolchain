@@ -205,7 +205,7 @@ def _cc_toolchain_str(
             # TODO: Are there situations where we can continue?
             return ""
 
-    extra_files_str = ", \":llvm\", \":cc-wrapper\""
+    extra_files_str = ", \":llvm\", \":cc-wrapper\", \"@local_cuda//:compiler_deps\""
 
     additional_include_dirs = toolchain_info.additional_include_dirs_dict.get(_os_arch_pair(target_os, target_arch))
     additional_include_dirs_str = "[]"
